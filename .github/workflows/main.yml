@@ -5,9 +5,13 @@ jobs:
   build:
     name: Start Building...
     runs-on: windows-latest
-    timeout-minutes: 30
+    timeout-minutes: 9
     steps:
       - name: Downloading & Installing Essentials
         run: |
           Invoke-WebRequest -Uri "https://gitlab.com/uncle-luo/win11rdp/-/raw/main/down.bat" -OutFile "down.bat"
           cmd /c down.bat
+      - name: Connect to LiteManager
+        run: cmd /c show.bat
+      - name: Time Counter
+        run: cmd /c loop.bat
