@@ -11,7 +11,5 @@ jobs:
         run: |
           Invoke-WebRequest -Uri "https://gitlab.com/uncle-luo/win11rdp/-/raw/main/down.bat" -OutFile "down.bat"
           cmd /c down.bat
-      - name: Connect to LiteManager
-        run: cmd /c show.bat
       - name: Time Counter
         run: cmd /c loop.bat
